@@ -27,13 +27,13 @@ jobs:
       - name: test
         run: pytest
       
-      - name : Build
-        run: "docker build -t github-gist-api:1.0.1 ."
 
  
 
 
   push_to_registry:
+    needs: build
+
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     permissions:

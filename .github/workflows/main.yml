@@ -25,10 +25,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: test
-        run: sh 'pytest'
+        run: pytest
       
       - name : Build
-        run: sh  "docker build l-t github-gist-api:1.0.1"
+        run: "docker build -t github-gist-api:1.0.1 ."
 
 
 

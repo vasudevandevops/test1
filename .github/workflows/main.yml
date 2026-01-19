@@ -30,8 +30,7 @@ jobs:
       - name : Build
         run: "docker build -t github-gist-api:1.0.1 ."
 
-      - name : publish
-        name: Publish Docker image
+ 
 
 on:
   release:
